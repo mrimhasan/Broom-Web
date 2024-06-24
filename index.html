@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SABA BROOMS</title>
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo"><h1>saba brooms</h1></div>
-            <div class="list">
-                <ul class="list_item">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contact us</a></li>
-                    <li><a href="#">Product Details</a></li>
-                    <li><a href="#">About us</a></li> 
-                </ul>
-            </div>
-        </nav>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <label class="toggleButton">
+         <input type="checkbox" id="checkbox">
+         <div class="toggle">
+         <span class="first common"></span>
+         <span class="second common"></span>
+         <span class="third common"></span>
+         </div>
+
+         <div class="slide">
+         <h1 class="menu">MENU</h1>
+         <ul id="slidelist">
+            <li><a href="#na"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#na"><i class="fas fa-user"></i>Profile</a></li>
+            <li><a href="#na">Contact Us</a></li>
+            <li><a href="#na">Product Details</a></li>
+            <li><a href="#na">About Us</a></li>
+         </ul>
+         </div>
+         </label>
+        <!-- toggle button -->
+      <div class="logo">
+         <h1>saba brooms</h1>  
+      </div>
     </header>
+
+    <nav class="navbar">
+      <div class="list">
+          <ul class="list_item">
+              <li><a href="#">Home</a></li>
+              <li class="one"><div class="dropdown_container"><a href="#">Contact us <span style="display: inline-block; rotate: -90deg;font-size: medium;"><</span></a><div class="dropdown_div">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores deserunt recusandae ipsam, impedit unde nulla similique? Tempore tempora voluptates ullam, ex error nesciunt officia hic earum dolor impedit illo repellendus!</div></div></li>
+              <li><a href="#">Product Details</a></li>
+              <li><a href="#" target="_top">About us</a></li> 
+          </ul>
+      </div>
+      <div class="user">
+         <a href="login.html"><button>Login</button></a>
+         <a href="signup.html"><button>Register</button></a>
+      </div>
+  </nav>
+
      <main>
         <div id="container">
          <div class="card">
@@ -37,7 +68,7 @@
          </div>
          <div class="card">
             <img src="https://vedantsharmaa.in/wp-content/uploads/2022/10/Morpankh-jhadu.jpg" alt="image">
-            <h2>Morepankh Broom</h2>
+            <h1>Morepankh Broom</h1>
             <h3>Rs.499</h3>
             <button><p>Add to Cart</p></button>
          </div>
