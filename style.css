@@ -1,3 +1,6 @@
+
+@import url(toggle_button.css);
+
 *{
    margin: 0;
    padding: 0;
@@ -8,30 +11,101 @@ body{
    font-family: "Manrope", sans-serif;
    font-style: normal;
    font-size: large;
+   background-color: #f1f1f1;
 }
-
-.navbar{
-    background-color: #9A6969;
-    display: flex;
-    flex-direction: column;
-    
+                                            /* Toggle button */
+  .toggleButton{
+    display: none;
+  }                                          
+                                                 /* HEADING */
+  ::selection{
+  color: white;
+  background: black;
+  border-radius: 10px;
 }
 
 .logo{
-    text-align: center;
+    width: 100%;
+    background-image: url(https://media.istockphoto.com/id/1028718088/vector/mop-and-broom-for-cleaning.jpg?s=612x612&w=0&k=20&c=i-cO6Gl1XsX-09fBvLCUsrlNtIaHMzgHirSITadQd7o=);
+    background-size: auto 6cm;
+    height:6cm;
+    align-items: center;
+    display: flex;
+    justify-content:space-evenly;
 }
 .logo h1{
+    font-family: Oswald;
+    /* margin-left:6cm; */
     text-transform: capitalize;
-    font-size: 100px;
-    color: aliceblue;
+    font-size: 120px;
+    animation: Color 4s linear infinite;
+    -webkit-animation: Color 4s ease-in-out infinite;
+}
+
+@keyframes Color{
+    0%{
+      color:#A0D468;
+    }
+    
+    20%{
+      color:#4FC1E9;
+    }
+    
+    40%{
+      color:#30e45d;
+    }
+    
+    60%{
+      color:#33d1d6;
+    }
+    
+    80%{
+      color:#ee4858;
+    }
+    
+    100%{
+      color:rgb(112, 23, 230);
+    }
+  }
+  
+
+                                                        /* Navigation Bar */        
+
+.navbar{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+}
+
+
+.user{
+    text-align: center;
+    width: 20%;
+    height: 1cm;
+    background-color: #f1f1f1;
+    align-items: center;
+}
+
+.user button{
+    width: 100px;
+    margin:3px;
+    background-color: white;
+    color: #007bff;
+}
+
+.user button:hover{
+    background-color:rgb(31, 152, 189);
+    color: black;
 }
 
 .list{
     background-color: #212529;
-    text-align: center; 
+    text-align: center;
+    width: 80%; 
 }
 
 .list_item{
+    margin-top: 5px;
     list-style: none;
     display:flex;
     justify-content: space-around;
@@ -44,10 +118,40 @@ body{
 }
 
 .list_item a:hover{
-    color:#b47474;
+    color:#007bff;
+}
+ .one:hover span{
+    transform:rotate(180deg);
+    transition: 0.4s;
 }
 
+span{
+    transition: 0.4s;   
+}
+.dropdown_container{
+    position:relative;
+    display:inline-block;
+  }
+  .dropdown_div{
+    position:absolute;
+    padding:5px;
+    display:none;
+    width:400px;
+    border-radius:10px;
+    background-color:rgb(255, 255, 255);
+    z-index:1;
+  }
+  .dropdown_container:hover .dropdown_div{
+    display:block;
+    transform: translateX(-100px);
+    box-shadow: 4px 4px 8px 0px grey;
+  }
+  /* .dropdown_div:hover .list_item:nth-child(2){       can't select child to parent 
+        color: #b15448;
+  } */
+                                        /* CARDS */
 #container{
+    width: 100%;
     background-color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -102,7 +206,7 @@ button:hover{
     background-color:#118f2e;
 }
 
-
+                            /* Footer */
 footer{
     color: white;
     background-color: #212529;
@@ -112,21 +216,87 @@ footer{
     padding-top: 20px;
 }
 
+                        /* Responsive */
+
+/* @import url(toggle_button.css)  only screen and (max-width:720px); */
 @media screen and (max-width: 720px){
+     .toggleButton{
+      display: contents;
+     }
+     .toggleButton2{
+      display: contents;
+      position: absolute;
+      float: right;
+     }
+     .list{
+      display: none;
+     }
+  }
+
+@media screen and (max-width: 480px){
     .card{
-        width: 50%;
+      position:relative;
+        top:40px;
+        margin:10px;
+        width:80%;
         height:max-content;
     }
+    .user{
+      display:flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+    footer{
+       position: relative;
+       top:80px;
+       height: fit-content;
+    }
 }
+
+
+@media screen and (min-width:480px) and (max-width:720px){
+    #container{
+        padding-top: 50px;
+    }
+    .card{
+        width:calc((80%/2));
+        height:max-content;
+        margin: 5px;
+    }
+    .card h1{
+        font-size:20px;
+    }
+}
+
+
 @media screen and (min-width:720px) and (max-width:1080px){
     .card{
         width: 30%;
         height:max-content;
+        margin: 5px;
+    }
+    .card h1{
+        font-size:20px;
+    }
+    #container{
+        padding-top: 50px;
     }
 }
 
+
 @media screen and  (max-width:720px){
-    .logo h1{
-        font-size: 72px;
+  .logo h1{
+    font-size:15vw;
+}
+    .logo {
+      background-size:30rem;
+      
+      background-repeat: repeat-x;
+      animation: animatedBackground-image 10s linear infinite;
     }
+    @keyframes animatedBackground-image {
+      0% { background-position: 0 0; }
+      50% { background-position: 50% 0; }
+      100% { background-position: 0 0; }
+  }
 }
