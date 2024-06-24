@@ -1,0 +1,190 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: rgb(130, 106, 251);
+  /* background: #f1f1f1; */
+}
+  
+  .logo{
+      width: 100%;
+      background-image: url(https://media.istockphoto.com/id/1028718088/vector/mop-and-broom-for-cleaning.jpg?s=612x612&w=0&k=20&c=i-cO6Gl1XsX-09fBvLCUsrlNtIaHMzgHirSITadQd7o=);
+      background-size: auto 6cm;
+      height:6cm;
+      align-items: center;
+      display: flex;
+      justify-content:space-evenly;
+  }
+  .logo h1{
+      font-family: Oswald;
+      text-transform: capitalize;
+      font-size: 120px;
+      animation: Color 4s linear infinite;
+      -webkit-animation: Color 4s ease-in-out infinite;
+  }
+  
+  @keyframes Color{
+      0%{
+        color:#A0D468;
+      }
+      
+      20%{
+        color:#4FC1E9;
+      }
+      
+      40%{
+        color:#30e45d;
+      }
+      
+      60%{
+        color:#33d1d6;
+      }
+      
+      80%{
+        color:#ee4858;
+      }
+      
+      100%{
+        color:rgb(112, 23, 230);
+      }
+    }
+  
+
+.container {
+  position: relative;
+  top: 50px;
+  /* bottom:1cm; */
+  /* left: 10vw;
+  right: 10vw; */
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: rgb(130, 106, 251);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(130, 106, 251);
+}
+.form button:hover {
+  background: rgb(88, 56, 250);
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+@media screen and  (max-width:520px){
+    .container{
+        max-width: 450px;
+    }
+}
+@media screen and  (max-width:720px){
+
+    .logo h1{
+      font-size:15vw;
+  }
+      .logo {
+        background-size:30rem;
+        background-repeat: repeat-x;
+        animation: animatedBackground-image 10s linear infinite;
+      }
+      @keyframes animatedBackground-image {
+        0% { background-position: 0 0; }
+        50% { background-position: 50% 0; }
+        100% { background-position: 0 0; }
+    }
+  }
