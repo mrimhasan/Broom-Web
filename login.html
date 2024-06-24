@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABA BROOMS</title>
+    <link rel="shortcut icon" href="android-chrome-512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login{
+            width: 100px;
+            background-color: rgba(25, 25, 185, 0.651);
+        }
+        .login:hover{
+            background-color: rgba(25, 25, 185, 0.781);
+        }
+         input:focus {
+         box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);}
+        .form :where(.input-box input) {
+        position: relative;
+        right: 5px;
+        height:40px;
+        width:80%;
+        outline: none;
+        font-size: 1rem;
+        color: #707070;
+        margin-top: 8px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+           <h1>saba brooms</h1>  
+        </div>
+    </header>
+    <section>
+    <div class="userLogin" style="display: flex;justify-content: center;top: 20px;position: relative;">
+        <form action="" method="get"  autocomplete="on" class="form">
+
+            <div><h1 style="margin-left: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Login</h1>
+            </div><br><br>
+
+            <div class="input-box"><label for="Uname">Username Or Email<sup style="color: red;">*</sup>:</label><br>
+                <input type="text" name="fname" id="Uname" placeholder="Enter" required />
+            </div>
+            <br>
+            <div class="input-box">
+                <label for="Password">Password<sup style="color: red;">*</sup>:</label>
+                <br>
+               <input type="password" placeholder="Password" name="password" id="Password" required />
+               <br><br>
+            </div>
+            
+            <button type="submit" class="login">Login</button><br><br>
+            <a href="#" >Forget Password</a>
+        </form>
+    </div>
+    </section>
+</body>
+</html>
